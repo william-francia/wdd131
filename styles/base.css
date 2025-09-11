@@ -1,0 +1,116 @@
+
+:root {
+  --ash-gray: #b2bcaaff;
+  --battleship-gray: #838e83ff;
+  --dim-gray: #726c6aff;
+
+  --ash-gray-hsl: hsla(93, 12%, 70%, 1);
+  --battleship-gray-hsl: hsla(120, 5%, 54%, 1);
+  --dim-gray-hsl: hsla(15, 4%, 43%, 1);
+
+  --gradient-top: linear-gradient(0deg, var(--ash-gray), var(--battleship-gray), var(--dim-gray));
+  --gradient-right: linear-gradient(90deg, var(--ash-gray), var(--battleship-gray), var(--dim-gray));
+  --gradient-radial: radial-gradient(var(--ash-gray), var(--battleship-gray), var(--dim-gray));
+
+  --font-base: "Roboto", sans-serif;
+  --font-heading: "Roboto Slab", serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: var(--battleship-gray);
+}
+#course-title{
+    padding: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    color: rgb(39, 30, 30);
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    justify-content: space-around;
+    font-family: var(--font-heading);
+    font-size: 25px;
+    background-color: var(--ash-gray);
+    padding: 20px;
+}
+header ul li a {
+  color: rgb(31, 58, 32);   /* o el color que quieras */
+  text-decoration: none;    /* quita el subrayado */
+  font-weight: bold;        /* opcional */
+}
+header ul li a:hover {
+  color: white;  /* cambia de color al pasar el mouse */
+}
+
+
+/* i would like to separeate in sections. */
+
+
+body {
+    color: var(--ash-gray);
+    font-family: var(--font-base);
+}
+main {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.card1{
+    position: relative;
+    background-color: rgb(193, 255, 142);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-size: 20px;
+    color: black
+}
+.title-aboutme{
+    position: absolute;
+    max-width: 500px;
+    color: white;
+    font-size: 50px;
+    right: 150px;
+}
+.title-aboutme1{
+    position: absolute;
+    max-width: 500px;
+    color: white;
+    font-size: 50px;
+    right: 270px;
+}
+p {
+    padding: 60px;
+}
+.card2{
+    background-color: var(--ash-gray);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-size: 20px;
+    color: black; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+h1 {
+    display: block;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    max-width: none;
+}
+
+footer {
+    background-color: var(--dim-gray);
+    display: flex;
+    justify-content: center;
+
+}
+
