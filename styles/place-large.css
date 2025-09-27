@@ -1,0 +1,56 @@
+@media screen and (min-width: 1000px) {
+
+    .info-card {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        padding: 15px;
+        text-align: center;
+        font-family: var(--font-base);
+        color: black;
+        line-height: 1;
+        list-style: none;
+        background-color: var(--base-color);
+        border: none solid;
+        border-radius: 15px;
+        max-width: 350px;
+    }
+    .info-card:hover, .info-card-weather:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+    }
+
+    li {
+        margin: 10px 0;
+        list-style: none;
+    }
+
+    .info-card-weather {
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+        padding: 15px;
+        max-height: 300px;
+        text-align: center;
+        font-family: var(--font-base);
+        color: black;
+        line-height: 1;
+        list-style: none;
+        background-color: var(--base-color);
+        border: none solid;
+        border-radius: 15px;
+    }
+
+    .weather-icon {
+        width: 60px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    main {
+        padding-top: 50px;
+        position: relative;
+        background-color: rgb(12, 41, 3);
+        padding-bottom: 70px;
+    }
+}

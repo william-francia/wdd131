@@ -25,7 +25,6 @@ linkLarge.href = "styles/temples-large.css";
 
 function aplicarEstilosGrandes() {
   if (window.innerWidth >= 900) {
-    // Si no está ya agregado, lo añadimos
     if (!document.head.contains(linkLarge)) {
       document.head.appendChild(linkLarge);
     }

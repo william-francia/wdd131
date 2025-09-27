@@ -1,0 +1,82 @@
+:root {
+    --primary-color: rgb(141, 141, 128);
+    --secundary-color: rgb(83, 119, 49);
+    --base-color: rgb(247, 235, 171);
+
+    --ash-gray-hsl: hsla(93, 12%, 70%, 1);
+    --battleship-gray-hsl: hsla(120, 5%, 54%, 1);
+    --dim-gray-hsl: hsla(15, 4%, 43%, 1);
+
+    --font-base: "Roboto", sans-serif;
+    --font-heading: "Roboto Slab", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--secundary-color);
+    padding: 30px;
+}
+
+picture,
+picture img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+main>div:first-child {
+    margin: 0;
+    padding: 0;
+}
+
+.title1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+
+
+.info-card {
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-base);
+    color: black;
+    line-height: 1.8;
+    list-style: none;
+    background-color: var(--base-color);
+}
+li {
+    margin: 10px 0;
+    list-style: none;
+}
+.info-card-weather {
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-base);
+    color: black;
+    line-height: 1.8;
+    list-style: none;
+    background-color: var(--base-color);
+}
+.weather-icon {
+    width: 90px;
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+
+
+footer {
+  background-color: var(--secundary-color);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
