@@ -1,24 +1,29 @@
+// Fecha y año en footer
 const currentYear = new Date().getFullYear();
-
-document.getElementById("currentyear").textContent = currentYear;
+const currentYearElem = document.getElementById("currentyear");
+if (currentYearElem) currentYearElem.textContent = currentYear;
 
 const lastModified = document.lastModified;
+const lastModifiedElem = document.getElementById("lastModified");
+if (lastModifiedElem) lastModifiedElem.textContent = `Last Modified: ${lastModified}`;
 
-document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+// Menú hamburguesa
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
+if (abrir && nav) {
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    });
+}
+if (cerrar && nav) {
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
+}
 
-const nav = document.querySelector("#nav")
-const abrir = document.querySelector("#abrir")
-const cerrar = document.querySelector("#cerrar")
-
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible")
-})
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible")
-})
-
-
+// Estilos grandes
 const linkLarge = document.createElement("link");
 linkLarge.rel = "stylesheet";
 linkLarge.href = "styles/temples-large.css";
@@ -34,16 +39,10 @@ function aplicarEstilosGrandes() {
         }
     }
 }
-
 aplicarEstilosGrandes();
-
 window.addEventListener("resize", aplicarEstilosGrandes);
 
-
-
-
-
-
+// Datos de templos
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -127,73 +126,10 @@ const temples = [
     }
 ];
 
-
-function createTempleCard() {
-    const gallery = document.querySelector('.gallery');
-    gallery.innerHTML = ""; 
-
-    temples.forEach(temple => {
-        let card = document.createElement("section");
-        let name = document.createElement("h3");
-        let location = document.createElement("p");
-        let dedication = document.createElement("p");
-        let area = document.createElement("p");
-        let img = document.createElement("img");
-
-        name.textContent = temple.templeName;
-        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-        dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-        area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
-        img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", `${temple.templeName} Temple`);
-        img.setAttribute("loading", "lazy");
-
-        card.appendChild(name);
-        card.appendChild(location);
-        card.appendChild(dedication);
-        card.appendChild(area);
-        card.appendChild(img);
-
-        gallery.appendChild(card);
-    });
-}
-
-// Llama a la función cuando la página cargue
-createTempleCard();
-
-function createTempleGallery() {
-    const gallery = document.querySelector('.gallery');
-    gallery.innerHTML = ""; // Limpia la galería antes de agregar
-
-    temples.forEach(temple => {
-        // Crea el figure
-        const figure = document.createElement("figure");
-
-        // Crea la imagen
-        const img = document.createElement("img");
-        img.src = temple.imageUrl;
-        img.alt = `${temple.templeName} Temple`;
-        img.loading = "lazy";
-
-        const caption = document.createElement("figcaption");
-        caption.innerHTML = `
-            <strong>${temple.templeName}</strong><br>
-            <span class="label">Location:</span> ${temple.location}<br>
-            <span class="label">Dedicated:</span> ${temple.dedicated}<br>
-            <span class="label">Size:</span> ${temple.area.toLocaleString()} sq ft
-        `;
-
-        figure.appendChild(img);
-        figure.appendChild(caption);
-
-        gallery.appendChild(figure);
-    });
-}
-
-createTempleGallery();
-
+// Mostrar templos
 function displayTemples(filteredTemples) {
     const gallery = document.querySelector('.gallery');
+    if (!gallery) return;
     gallery.innerHTML = "";
     filteredTemples.forEach(temple => {
         const figure = document.createElement("figure");
@@ -201,6 +137,8 @@ function displayTemples(filteredTemples) {
         img.src = temple.imageUrl;
         img.alt = `${temple.templeName} Temple`;
         img.loading = "lazy";
+        img.width = 400; // Tamaño uniforme
+        img.height = 250;
         const caption = document.createElement("figcaption");
         caption.innerHTML = `
             <strong>${temple.templeName}</strong><br>
@@ -214,20 +152,27 @@ function displayTemples(filteredTemples) {
     });
 }
 
+// Filtros
 function filterOld(e) {
-    e.preventDefault();
-    displayTemples(temples.filter(t => parseInt(t.dedicated.split(',')[0]) < 1900));
+    if (e) e.preventDefault();
+    displayTemples(temples.filter(t => {
+        const year = parseInt(t.dedicated.split(',')[0]);
+        return year < 1900;
+    }));
 }
 function filterNew(e) {
-    e.preventDefault();
-    displayTemples(temples.filter(t => parseInt(t.dedicated.split(',')[0]) > 2000));
+    if (e) e.preventDefault();
+    displayTemples(temples.filter(t => {
+        const year = parseInt(t.dedicated.split(',')[0]);
+        return year > 2000;
+    }));
 }
 function filterLarge(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     displayTemples(temples.filter(t => t.area > 90000));
 }
 function filterSmall(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     displayTemples(temples.filter(t => t.area < 10000));
 }
 function showAll(e) {
@@ -235,10 +180,18 @@ function showAll(e) {
     displayTemples(temples);
 }
 
-document.getElementById("home").addEventListener("click", showAll);
-document.getElementById("old").addEventListener("click", filterOld);
-document.getElementById("new").addEventListener("click", filterNew);
-document.getElementById("large").addEventListener("click", filterLarge);
-document.getElementById("small").addEventListener("click", filterSmall);
+// Asignar eventos solo si existen los elementos
+const homeBtn = document.getElementById("home");
+const oldBtn = document.getElementById("old");
+const newBtn = document.getElementById("new");
+const largeBtn = document.getElementById("large");
+const smallBtn = document.getElementById("small");
 
+if (homeBtn) homeBtn.addEventListener("click", showAll);
+if (oldBtn) oldBtn.addEventListener("click", filterOld);
+if (newBtn) newBtn.addEventListener("click", filterNew);
+if (largeBtn) largeBtn.addEventListener("click", filterLarge);
+if (smallBtn) smallBtn.addEventListener("click", filterSmall);
+
+// Mostrar todos al cargar
 showAll();
