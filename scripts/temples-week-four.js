@@ -1,4 +1,3 @@
-// Fecha y año en footer
 const currentYear = new Date().getFullYear();
 const currentYearElem = document.getElementById("currentyear");
 if (currentYearElem) currentYearElem.textContent = currentYear;
@@ -23,7 +22,7 @@ if (cerrar && nav) {
     });
 }
 
-// Estilos grandes
+// Gig styles
 const linkLarge = document.createElement("link");
 linkLarge.rel = "stylesheet";
 linkLarge.href = "styles/temples-large.css";
@@ -42,7 +41,7 @@ function aplicarEstilosGrandes() {
 aplicarEstilosGrandes();
 window.addEventListener("resize", aplicarEstilosGrandes);
 
-// Datos de templos
+// temples data
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -126,7 +125,7 @@ const temples = [
     }
 ];
 
-// Mostrar templos
+// show temples
 function displayTemples(filteredTemples) {
     const gallery = document.querySelector('.gallery');
     if (!gallery) return;
@@ -137,7 +136,7 @@ function displayTemples(filteredTemples) {
         img.src = temple.imageUrl;
         img.alt = `${temple.templeName} Temple`;
         img.loading = "lazy";
-        img.width = 400; // Tamaño uniforme
+        img.width = 400; 
         img.height = 250;
         const caption = document.createElement("figcaption");
         caption.innerHTML = `
@@ -152,7 +151,7 @@ function displayTemples(filteredTemples) {
     });
 }
 
-// Filtros
+// Filters
 function filterOld(e) {
     if (e) e.preventDefault();
     displayTemples(temples.filter(t => {
@@ -180,7 +179,6 @@ function showAll(e) {
     displayTemples(temples);
 }
 
-// Asignar eventos solo si existen los elementos
 const homeBtn = document.getElementById("home");
 const oldBtn = document.getElementById("old");
 const newBtn = document.getElementById("new");
@@ -193,5 +191,5 @@ if (newBtn) newBtn.addEventListener("click", filterNew);
 if (largeBtn) largeBtn.addEventListener("click", filterLarge);
 if (smallBtn) smallBtn.addEventListener("click", filterSmall);
 
-// Mostrar todos al cargar
+// Show all temples initially
 showAll();
