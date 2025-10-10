@@ -1,0 +1,188 @@
+:root {
+    --primary-color: rgb(141, 141, 128);
+    --secundary-color: rgb(139, 135, 180);
+    --base-color: rgb(83, 81, 81);
+
+    --font-base: "Roboto", sans-serif;
+    --font-heading: "Roboto Slab", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    background-color: var(--base-color);
+    padding: 20px;
+    color: white;
+    font-family: var(--font-heading);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: var(--font-base);
+    background-color: var(--secundary-color);}
+
+
+
+#productName, #date{
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    margin: 5px 0px;
+}
+#date {
+    margin-bottom: 30px;
+}
+
+.title1 {
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    margin-bottom: none;
+}
+
+.rating {
+    padding-top: 15px;
+    display: flex;
+    font-weight: 200px;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-family: var(--font-base);
+    gap: 25px;
+}
+
+.star {
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    gap: 5px;
+}
+
+.features {
+    padding: 5px;
+    font-weight: 200px;
+    font-size: 1rem;
+    font-family: var(--font-base);
+    margin-bottom: 40px;
+}
+
+#writtenReview {
+    padding: 50px 5px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    margin: 10px 0px;
+}
+
+#yourname {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    margin: 10px 0px;
+}
+
+input[type="submit"] {
+    background-color: var(--base-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color);
+}
+
+
+footer {
+    background-color: var(--base-color);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: white
+}
+  .Overalltittle{
+    margin-top: 20px;
+  }
+
+
+@media screen and (min-width: 700px) {
+  header {
+    padding: 40px;
+    font-size: 1.5rem;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    font-size: 1rem;
+  }
+
+  .Overalltittle{
+    margin-top: 50px;
+  }
+  .title1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .rating {
+    gap: 60px;
+    font-size: 1.2rem;
+    justify-content: center;
+     margin-top: 20px;
+  }
+
+  .star {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .features {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+
+  #writtenReview {
+    padding: 60px 10px;
+    font-size: 1.1rem;
+  }
+
+  #yourname, #productName, #date {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  input[type="submit"] {
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  footer {
+    padding: 70px;
+    font-size: 1.2rem;
+  }
+}
