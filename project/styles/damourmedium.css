@@ -1,0 +1,130 @@
+@media screen and (min-width: 600px) {
+/* Estilos sobrenosotros */
+main {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* --- SECCIÓN SOBRE NOSOTROS --- */
+#about p {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+#about .lead {
+  font-size: 1.05rem;
+}
+#about {
+    margin: 20px 20px;
+}
+
+.main-title {
+  font-family: var(--font-heading);
+  color: var(--var2);
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+.highlight {
+  color: var(--var2);
+  font-weight: bold;
+}
+
+/* --- FOTO DE FAMILIA --- */
+.family-photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+  gap: 12px;
+  margin-top: 68px;
+}
+
+.family-photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.family-text h3 {
+  color: var(--var2);
+  font-family: var(--font-heading);
+  margin-bottom: 8px;
+}
+
+.meta {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* --- GALERÍA DE TORTAS --- */
+#gallery {
+  margin: 25px 0;
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  gap: 45px;
+}
+
+
+.cake-photo {
+  background-color: var(--var1);
+  border: 1px solid var(--var2);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+    margin: 0 60px;
+}
+
+.cake-photo img {
+  width: auto;
+  height: 230px;
+  border-radius: 8px;
+
+}
+
+.cake-photo figcaption {
+  margin-top: 6px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* --- TESTIMONIOS --- */
+#testimonials {
+  margin-bottom: 60px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.testimonial {
+  background: var(--var7);
+  border-left: 5px solid var(--var4);
+  padding: 0 12px;
+  border-radius: 8px;
+  margin: 0 10px;
+  padding: 30px;
+}
+  
+
+.testimonial h4 {
+  margin: 0 0 5px;
+  font-family: var(--font-heading);
+  color: var(--var2);
+}
+
+.testimonial p {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+}

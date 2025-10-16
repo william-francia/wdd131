@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="William Francia">
+    <meta name="description" content="¿Tendrás una boda o un evento especial? ¿Tal vez un cumpleaños?
+¡Estás en el lugar correcto! Aquí encontrarás los mejores productos a los mejores precios.
+Sabemos lo difícil que es encontrar un 'dessert catering service' para eventos tan importantes como una boda.
+En nuestro negocio te ofrecemos confianza, calidad y deleite.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles/damoursmall.css">
+    <link rel="stylesheet" href="styles/damourmedium.css">
+    <link rel="stylesheet" href="styles/damourlarge.css">
+    <script src="script/damour.js" defer></script>
+    <title>William Benjamin Francia Poma | D'amour</title>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="logo1">
+            <img src="images/logo1.webp" alt="Logo de la pagina" width="200" height="120">
+        </div>
+        <!-- Botón para abrir el menú (hamburguesa) -->
+        <button class="abrir-menu" id="abrir"><i class="bi-list"></i></button>
+
+        <!-- Menú de navegación -->
+        <nav class="nav-header" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi-x-lg"></i></button>
+            <ul class="ul-list">
+                <li><a href="damour.html">Home</a></li>
+                <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a href="https://drive.google.com/file/d/1e9xJQIb4NHa4mbGiUcZzGJwhoCNuZCXv/view?usp=drive_link">Catalogo</a></li>
+                <li><a href="contactanos.html">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+    <main id="maincontactanos">
+        <h2 class="title1form" id="title2form">Dejanos tu numero y nombre, y nos pondremos en contacto con tigo</h2>
+        <form method="get" action="review.html">
+
+            <label class="title1form" for="date">Date of wedding:</label>
+            <input type="date" id="date" name="date" required min="2020-01-01" max="2025-12-31">
+
+            <label class="title1form" for="yourname">Your name</label>
+            <input type="text" id="yourname" name="yourname" placeholder="Enter your name (optional)">
+
+            <label class="title1form" for="yourname">Your phone number</label>
+            <input type="text" id="yourphonenumber" name="yourname" placeholder="Enter your number" required>
+
+
+            <div class="Overalltittle">
+                <label class="title1form" for="star1">Overall Rating:</label>
+                <div class="rating">
+                    <div class="star">
+                        <input type="radio" id="star1" name="rating" value="1" required>
+                        <label for="star1">★</label>
+                    </div>
+                    <div class="star">
+                        <input type="radio" id="star2" name="rating" value="2" required>
+                        <label for="star2">★★</label>
+                    </div>
+                    <div class="star">
+                        <input type="radio" id="star3" name="rating" value="3" required>
+                        <label for="star3">★★★</label>
+                    </div>
+                    <div class="star">
+                        <input type="radio" id="star4" name="rating" value="4" required>
+                        <label for="star4">★★★★</label>
+                    </div>
+                    <div class="star">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5">★★★★★</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footerfrase">
+            <p>"Nosotros endulzamos tus momentos más especiales con sabor, calidad y confianza."</p>
+        </div>
+        <p>&copy; <span id="currentyear"></span> William Benjamin Francia Poma - Bolivia</p>
+        <p id="lastModified"></p>
+        <div class="footer2">
+            <nav class="socialmedia">
+                <a class="facebook" href="https://www.facebook.com/?locale=es_LA">
+                    <img src="images/app_facebook_logo.png" alt="facebook" width="35" height="35">
+                </a>
+                <a class="instagram" href="https://www.instagram.com/">
+                    <img src="images/instagram_icon.png" alt="instagram" width="35" height="35">
+                </a>
+                <a class="whatsapp" href="https://www.whatsapp.com/?lang=es_LA">
+                    <img src="images/whatsapp.png" alt="whatsapp" width="35" height="35">
+                </a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
